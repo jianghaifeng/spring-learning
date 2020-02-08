@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: demo-in-cloud
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+
+---
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: local
+    password: local
+  cloud:
+    kubernetes:
+      enabled: false
+management:
+  endpoint:
+    restart:
+      enabled: false
