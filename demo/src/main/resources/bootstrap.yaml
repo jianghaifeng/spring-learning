@@ -3,6 +3,8 @@ spring:
     name: demo-in-cloud
   main:
     allow-bean-definition-overriding: true
+  flyway:
+    enabled: true
   cloud:
     kubernetes:
       reload:
@@ -15,3 +17,4 @@ spring:
     url: jdbc:postgresql://localhost:5432/demo
     username: test
     password: test
+
